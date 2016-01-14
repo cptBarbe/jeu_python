@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="76" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="Capture du 2015-02-10 17:05:23" tilewidth="16" tileheight="16">
+  <image source="../jeu/images/Capture du 2015-02-10 17:05:23.png" width="256" height="208"/>
+ </tileset>
+ <tileset firstgid="209" name="Capture du 2015-02-10 17:05:23 (copie)" tilewidth="16" tileheight="16">
+  <image source="../jeu/images/Capture du 2015-02-10 17:05:23 (copie).png" width="256" height="208"/>
+ </tileset>
+ <tileset firstgid="417" name="Capture du 2015-02-10 16:44:53" tilewidth="16" tileheight="16">
+  <image source="../jeu/images/Capture du 2015-02-10 16:44:53.png" width="321" height="209"/>
+ </tileset>
+ <layer name="sol" width="100" height="76">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMBKHrn+8DrcdQcNVUVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX33AJoelyk=
+  </data>
+ </layer>
+ <layer name="fleurs" width="100" height="76">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI8GdsAAAQ==
+  </data>
+ </layer>
+ <layer name="murs" width="100" height="76">
+  <data encoding="base64" compression="zlib">
+   eJztmMFtwjAUQJ0DPXUEFqOdoHQDNoAN6FxdgW7QnnqoOXAAhfDTWPaDvCc9+RT4suUHyiGl9JU9uCLW7+yPK2ZddCk9da6U9XRPpC2XvZK2XPZK2mKvWNgrFvaKhb1iYa9Y2CsW9oqFvWJhr1jYKxb2ioW9YmGvWNgrFvaKhb1iYa9Y2CsW9oqFvWJhr1jYKxb2ioW9YmGvWNgrFvaKhb1iYa9Y2CsW9oqFvWJhr1jYKxb2ioW9YmGvWNgrFvaKhb1iYa9Y2CsW9oqFvWJhr1jYKxb2ioW9YmGv2rLKe//So70az7W9fA125vj8R3bd4397NXWmoc+IOOZ7SjK0l/vg7NeeX0/Yj6kz3Zrrlu/d+R7VOL+hs5iLz4Fzj+zRvsCZvAVn05hj7m7p+1zTpTNU0fuoqnPS5qmqlnUO/5c1pr+x5fReTXeb3WR3gFmI1r6vx3fDnz3vBzVuyS6c3ivey/vBWvui+oj+pvYzPKp/clhiDg==
+  </data>
+ </layer>
+</map>
