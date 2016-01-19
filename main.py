@@ -4,7 +4,7 @@ from pygame.locals import *
 pygame.init()
 
 #def pause():
-#def pnj:
+#def pnj():
 
 def alterner(l, r):
     pygame.key.set_repeat(10, 60)
@@ -52,7 +52,7 @@ while continuer: # boucle principale (strucutre du jeu)
                 for event in pygame.event.get():
                     print "event"
                     if event.type == QUIT:
-                        print "fin du jeu\n"
+                        print "fin du jeu"
                         continuer = False
 
                     if event.type == KEYDOWN:
