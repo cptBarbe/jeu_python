@@ -3,20 +3,26 @@ from pygame.locals import *
 
 pygame.init()
 
-#def pause():
-#def pnj():
+def pause():
+    fond = pygame.image.load("fond.jpg")
+    fenetre.blit(fond)
+    pygame.display.flip()
 
-def alterner(l, r):
-    pygame.key.set_repeat(10, 60)
-    a = 1
+# def pnj():
+# def musique():
+
+"""
+def alterner(a, l, r):
     if a % 2 == 1:
         a = a + 1
         perso = pygame.image.load(l).convert_alpha()
-        print "Droite"
+        print "Gauche"
+
     else:
         a = a + 1
         perso = pygame.image.load(r).convert_alpha()
-        print "Gauche"
+        print "Droite"
+"""
 
 # declaration des variables du jeu
 fenetre = pygame.display.set_mode((800, 540))
@@ -28,29 +34,31 @@ start_fond = pygame.image.load("fond.jpg")
 start_boutton = pygame.image.load("start.png")
 menu = True
 jeu = True
+a = 1
 
-#"blittage" des surfaces
+# "blittage" des surfaces
 fenetre.blit(start_fond, (0,0))
 fenetre.blit(start_boutton, (270,400))
 pygame.display.flip() # raffriachissement des surfaces
 
 while continuer: # boucle principale (strucutre du jeu)
-    pygame.time.Clock().tick(30)
-    
+    pygame.time.Clock().tick(100)
+    pygame.key.set_repeat(10, 60)
+
     for event in pygame.event.get():
         if event.type == QUIT:
             continuer = False
         else:
             while menu: # boucle du menu
-                print "Menu"
+#                print "Menu"
                 for event in pygame.event.get():
                     if event.type == MOUSEBUTTONDOWN:
                         menu = 0
 
             while jeu: # boucle du jeu
-                print "Jeu"
+#                print "Jeu"
                 for event in pygame.event.get():
-                    print "event"
+#                    print "event"
                     if event.type == QUIT:
                         print "fin du jeu"
                         continuer = False
@@ -58,23 +66,66 @@ while continuer: # boucle principale (strucutre du jeu)
                     if event.type == KEYDOWN:
                         if event.key == K_a:
                             perso_position = perso_position.move(0, 5)
-                            alterner("faceL.png", "faceR.png")
-
+                            #alterner(1, "faceL.png", "faceR.png")
+                            if a % 2 == 1:
+                                a = a + 1
+                                perso = pygame.image.load("faceL.png").convert_alpha()
+#                                print "Gauche"
+                                
+                            else:
+                                a = a + 1
+                                perso = pygame.image.load("faceR.png").convert_alpha()
+#                                print "Droite"
+                                
                         if event.key == K_u:
                             perso_position = perso_position.move(5, 0)
-
+                            #alterner(1, "r1.png", "r2.png")
+                            if a % 2 == 1:
+                                a = a + 1
+                                perso = pygame.image.load("r1.png").convert_alpha()
+#                                print "Gauche"
+                                
+                            else:
+                                a = a + 1
+                                perso = pygame.image.load("r2.png").convert_alpha()
+#                                print "Droite"
+                                        
                         if event.key == K_o:
                             perso_position = perso_position.move(-5, 0)
-                    
+                            #alterner(1,"l1.png", "l2.png")
+
+                            if a % 2 == 1:
+                                a = a + 1
+                                perso = pygame.image.load("l1.png").convert_alpha()
+#                                print "Gauche"
+                                    
+                            else:
+                                a = a + 1
+                                perso = pygame.image.load("l2.png").convert_alpha()
+#                                print "Droite"        
+                            
                         if event.key == K_QUOTE:
                             perso_position = perso_position.move(0, -5)
+                            #alterner(1,"haut1.png", "haut2.png")
 
+                            if a % 2 == 1:
+                                a = a + 1
+                                perso = pygame.image.load("haut1.png").convert_alpha()
+#                                print "Gauche"
+                                    
+                            else:
+                                a = a + 1
+                                perso = pygame.image.load("haut2.png").convert_alpha()
+#                                print "Droite"
+                                        
                         if event.key == K_ESCAPE:
-                            #pause()
+#                            pause()
                             jeu = False
+                            print jeu
+                            exit
+                            
                 continuer = True
 #                print continuer
-                pygame.key.set_repeat(10, 60)
                 fenetre.blit(fond, (0,0))
                 fenetre.blit(perso, perso_position)
                 pygame.display.flip()

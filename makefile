@@ -1,0 +1,2 @@
+compiler:
+	python main.py
