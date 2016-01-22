@@ -3,7 +3,7 @@ from pygame.locals import *
 
 pygame.init()
 
-#def musique(mus):
+# def musique(mus):
 
 def pause():
     for event in pygame.event.get():
