@@ -4,11 +4,14 @@ import random
 from pygame.locals import *
 from random import *
 
+
 pygame.init()
 
 # def musique(musique):
 
+
 # def pnj():
+
 
 def pause():
     pause = True
@@ -45,35 +48,30 @@ def altern(a, l, r):
 imagePATH = "/home/joseph/Bureau/jeu_python/tiles"
 musiquePATH = "/home/joseph/Bureau/jeu_python/musique"
 fenetre = pygame.display.set_mode((800, 540)) # 50 * 33
-continuer = True
 fond = pygame.image.load("terrain2.png").convert()
 perso = pygame.image.load("face.png").convert_alpha()
 perso_position = perso.get_rect()
 start_fond = pygame.image.load("fond.jpg")
 start_boutton = pygame.image.load("start.png")
+
+continuer = True
 menu = True
 jeu = True
+
 a = 1
 
-# "blittage" des surfaces
-fenetre.blit(start_fond, (0,0))
-fenetre.blit(start_boutton, (270,400))
-pygame.display.flip() # raffriachissement des surfaces
+pygame.key.set_repeat(1, 50)
 
 while continuer: # boucle principale (strucutre du jeu)
-    pygame.time.Clock().tick(100)
-    pygame.key.set_repeat(10, 60)
 
     for event in pygame.event.get():
-                       
+
         if event.type == QUIT:
             exit()
                         
         if event.type == KEYDOWN:
-            print perso_position
-            pygame.key.set_repeat(10, 60)            
-            
-                
+            print perso_position           
+
             if event.key == K_a:
                 perso_position = perso_position.move(0, 5)
                 # altern(1, "faceL.png", "faceR.png")
@@ -122,7 +120,7 @@ while continuer: # boucle principale (strucutre du jeu)
                     perso = pygame.image.load("haut2.png").convert_alpha()
                                         
             if event.key == K_ESCAPE:
-                jeu = False
+                #jeu = False
                 pause()
 
     continuer = True
